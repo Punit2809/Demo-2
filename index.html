@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HireFlow — IT Staffing &amp; Job Marketplace</title>
+  <meta name="description" content="HireFlow is a modern IT recruitment and job marketplace connecting skilled technology professionals with the companies that need them.">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div id="header"></div>
+  <div id="navbar"></div>
+
+  <!-- ========================= HERO ========================= -->
+  <section class="hero text-center">
+    <div class="container">
+      <span class="hero-badge"><span class="dot"></span> Trusted by 500+ hiring teams</span>
+      <h1 class="mx-auto">Find the Talent That <span class="grad-text">Moves Your Business</span> Forward</h1>
+      <p class="lead mx-auto">Connect with skilled technology professionals and build high-performing teams faster.</p>
+
+      <form id="homeSearchForm" class="search-box mx-auto" role="search">
+        <div class="search-field search-suggest">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          <input id="homeKeyword" type="text" placeholder="Job title, skill or keyword" aria-label="Job title or skill" autocomplete="off">
+        </div>
+        <div class="search-field">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+          <input id="homeLocation" type="text" placeholder="Location" aria-label="Location" autocomplete="off">
+        </div>
+        <button type="submit" class="btn btn-primary">Search Jobs</button>
+      </form>
+
+      <div class="popular-searches justify-content-center">
+        <span class="ps-label">Popular:</span>
+        <a href="#" class="search-tag" data-q=".NET Developer">.NET Developer</a>
+        <a href="#" class="search-tag" data-q="React Developer">React Developer</a>
+        <a href="#" class="search-tag" data-q="Java Developer">Java Developer</a>
+        <a href="#" class="search-tag" data-q="DevOps">DevOps</a>
+        <a href="#" class="search-tag" data-q="Data Engineer">Data Engineer</a>
+        <a href="#" class="search-tag" data-q="QA Engineer">QA Engineer</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= STATISTICS ========================= -->
+  <section class="stats-band">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-6 col-lg-3">
+          <div class="stat-card">
+            <div class="stat-value"><span data-count="10000">0</span>+</div>
+            <p class="stat-label">Candidates</p>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="stat-card">
+            <div class="stat-value"><span data-count="500">0</span>+</div>
+            <p class="stat-label">Employers</p>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="stat-card">
+            <div class="stat-value"><span data-count="1500">0</span>+</div>
+            <p class="stat-label">Jobs</p>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3">
+          <div class="stat-card">
+            <div class="stat-value"><span data-count="95">0</span>%</div>
+            <p class="stat-label">Client Satisfaction</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= POPULAR JOBS ========================= -->
+  <section class="section" id="jobs">
+    <div class="container">
+      <div class="d-flex flex-wrap justify-content-between align-items-end mb-5 gap-3">
+        <div>
+          <span class="eyebrow">Popular Jobs</span>
+          <h2 class="section-title mb-2">Featured Opportunities</h2>
+          <p class="section-lead">Hand-picked roles from top technology companies.</p>
+        </div>
+        <a href="jobs.html" class="btn btn-outline">View All Jobs</a>
+      </div>
+      <div id="homeJobs" class="row g-4"></div>
+    </div>
+  </section>
+
+  <!-- ========================= TOP CATEGORIES ========================= -->
+  <section class="section section-soft" id="categories">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="eyebrow">Top Categories</span>
+        <h2 class="section-title">Browse Jobs by Category</h2>
+        <p class="section-lead center">Explore roles across the most in-demand technology disciplines.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <a href="jobs.html" class="category-card reveal">
+            <span class="category-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg></span>
+            <span><h4>Software Development</h4><span class="count">320 jobs</span></span>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <a href="jobs.html" class="category-card reveal" data-delay="1">
+            <span class="category-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9Z"/><path d="M6.5 14a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9Z"/><path d="M13 6h.01"/><path d="M13 12h.01"/><path d="M13 18h.01"/></svg></span>
+            <span><h4>Cloud &amp; DevOps</h4><span class="count">180 jobs</span></span>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <a href="jobs.html" class="category-card reveal" data-delay="2">
+            <span class="category-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg></span>
+            <span><h4>Data &amp; AI</h4><span class="count">140 jobs</span></span>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <a href="jobs.html" class="category-card reveal" data-delay="3">
+            <span class="category-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg></span>
+            <span><h4>QA &amp; Testing</h4><span class="count">95 jobs</span></span>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <a href="jobs.html" class="category-card reveal" data-delay="4">
+            <span class="category-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2"/><circle cx="8" cy="8" r="2"/><path d="m21 15-4-4-6 6-3-3-6 6"/></svg></span>
+            <span><h4>UI/UX</h4><span class="count">78 jobs</span></span>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <a href="jobs.html" class="category-card reveal" data-delay="5">
+            <span class="category-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l7 3v6c0 4.4-3 7.4-7 9-4-1.6-7-4.6-7-9V5z"/></svg></span>
+            <span><h4>Cybersecurity</h4><span class="count">110 jobs</span></span>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <a href="jobs.html" class="category-card reveal" data-delay="6">
+            <span class="category-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 18l6-6-6-6"/><path d="M8 6l-6 6 6 6"/></svg></span>
+            <span><h4>Project Management</h4><span class="count">65 jobs</span></span>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <a href="jobs.html" class="category-card reveal" data-delay="7">
+            <span class="category-icon"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8"/><path d="M12 17v4"/></svg></span>
+            <span><h4>IT Support</h4><span class="count">52 jobs</span></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= HOW IT WORKS ========================= -->
+  <section class="section" id="how-it-works">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="eyebrow">How It Works</span>
+        <h2 class="section-title">Simple for Everyone</h2>
+        <p class="section-lead center">A streamlined process whether you're hiring or looking for your next role.</p>
+      </div>
+
+      <h3 class="mb-4 text-center">For Candidates</h3>
+      <div class="row g-4 mb-5">
+        <div class="col-md-6 col-lg-3">
+          <div class="step-card reveal"><span class="step-num">01</span><h4>Create Profile</h4><p>Build a standout profile in minutes.</p></div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="step-card reveal" data-delay="1"><span class="step-num">02</span><h4>Search Jobs</h4><p>Browse roles that match your skills.</p></div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="step-card reveal" data-delay="2"><span class="step-num">03</span><h4>Apply</h4><p>Apply to opportunities in one click.</p></div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="step-card reveal" data-delay="3"><span class="step-num">04</span><h4>Get Hired</h4><p>Interview and land your next role.</p></div>
+        </div>
+      </div>
+
+      <h3 class="mb-4 text-center">For Employers</h3>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="step-card reveal"><span class="step-num">01</span><h4>Post Job</h4><p>Publish your role in minutes.</p></div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="step-card reveal" data-delay="1"><span class="step-num">02</span><h4>Discover Talent</h4><p>Match with vetted candidates.</p></div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="step-card reveal" data-delay="2"><span class="step-num">03</span><h4>Interview</h4><p>Coordinate interviews effortlessly.</p></div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="step-card reveal" data-delay="3"><span class="step-num">04</span><h4>Hire</h4><p>Extend offers and build your team.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= WHY US ========================= -->
+  <section class="section section-soft" id="why-us">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="eyebrow">Why HireFlow</span>
+        <h2 class="section-title">Built to Make Hiring Easier</h2>
+        <p class="section-lead center">Smart features that help both sides of the hiring process.</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card reveal">
+            <div class="icon-badge"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l7 3v6c0 4.4-3 7.4-7 9-4-1.6-7-4.6-7-9V5z"/><path d="m9 12 2 2 4-4"/></svg></div>
+            <h3>Verified Talent</h3>
+            <p>Every candidate profile is reviewed and validated for quality.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card reveal" data-delay="1">
+            <div class="icon-badge"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/><path d="M20 6 9 17l-5-5"/></svg></div>
+            <h3>Smart Matching</h3>
+            <p>AI-assisted matching connects the right people to the right roles.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card reveal" data-delay="2">
+            <div class="icon-badge"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+            <h3>Fast Hiring</h3>
+            <p>Streamlined workflows cut time-to-hire dramatically.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card reveal" data-delay="3">
+            <div class="icon-badge"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+            <h3>Recruitment Support</h3>
+            <p>Our recruiters support you through every stage.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card reveal" data-delay="4">
+            <div class="icon-badge"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg></div>
+            <h3>Career Guidance</h3>
+            <p>Resume, interview and career advice for candidates.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="feature-card reveal" data-delay="5">
+            <div class="icon-badge"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="m2 17 10 5 10-5"/><path d="m2 12 10 5 10-5"/></svg></div>
+            <h3>Dedicated Recruiters</h3>
+            <p>A personal point of contact who knows your goals.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= TECHNOLOGY ========================= -->
+  <section class="section" id="technology">
+    <div class="container">
+      <div class="text-center mb-5">
+        <span class="eyebrow">Technology</span>
+        <h2 class="section-title">We Recruit Every Major Stack</h2>
+      </div>
+      <div class="d-flex flex-wrap justify-content-center gap-3">
+        <span class="tech-badge"><span class="dot"></span>C#</span>
+        <span class="tech-badge"><span class="dot"></span>.NET</span>
+        <span class="tech-badge"><span class="dot"></span>ASP.NET</span>
+        <span class="tech-badge"><span class="dot"></span>Java</span>
+        <span class="tech-badge"><span class="dot"></span>Spring Boot</span>
+        <span class="tech-badge"><span class="dot"></span>React</span>
+        <span class="tech-badge"><span class="dot"></span>Angular</span>
+        <span class="tech-badge"><span class="dot"></span>Node.js</span>
+        <span class="tech-badge"><span class="dot"></span>Python</span>
+        <span class="tech-badge"><span class="dot"></span>AWS</span>
+        <span class="tech-badge"><span class="dot"></span>Azure</span>
+        <span class="tech-badge"><span class="dot"></span>Docker</span>
+        <span class="tech-badge"><span class="dot"></span>Kubernetes</span>
+        <span class="tech-badge"><span class="dot"></span>SQL</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= DUAL CTA ========================= -->
+  <section class="section section-soft">
+    <div class="container">
+      <div class="dual-cta">
+        <div class="cta-card cta-employer reveal">
+          <h3>Need Skilled IT Professionals?</h3>
+          <p>Post your role and connect with vetted, high-quality technology talent.</p>
+          <div class="cta-actions">
+            <a href="employers.html#post-job" class="btn btn-primary btn-lg">Find Talent</a>
+          </div>
+        </div>
+        <div class="cta-card cta-candidate reveal" data-delay="1">
+          <h3>Looking For Your Next Opportunity?</h3>
+          <p>Discover roles that match your skills and advance your career.</p>
+          <div class="cta-actions">
+            <a href="jobs.html" class="btn btn-primary btn-lg">Explore Jobs</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer"></div>
+
+  <script src="assets/jquery/jquery.min.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/jobs-data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
